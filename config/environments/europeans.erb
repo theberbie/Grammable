@@ -1,0 +1,37 @@
+class European
+attr_reader :country
+
+  def initialize(country)
+   @country = country
+
+  end
+
+  def travels
+    puts "If I drive 4 hours, I'll end up in another country"
+
+  end
+
+  class French < European
+
+  def sayHello
+    puts "Bonjour!"
+  end
+
+  class Parisian < French
+
+  def live 
+    puts "Rent is expensive here"
+  end
+
+  end
+
+  end
+   
+
+end
+
+euro = European.new
+french = French.new
+live = Live.new
+
+puts euro
