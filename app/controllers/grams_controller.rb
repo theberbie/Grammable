@@ -23,17 +23,28 @@ class GramsController < ApplicationController
     end
   end
 
+  def destroy
+    @gram = Gram.find_by_id(params[:id])
+    if @gram.blank?
+      render text: 'Not found', status: :not_found
+    else
+    @gram.destroy
+    redirect_to root_path
+  end
+end
+
   def create
     @gram = current_user.grams.create(gram_params)
     if @gram.valid?
      redirect_to root_path
     else render :new, status: :unprocessable_entity
    end
+ end
 
-  end
 
   def gram_params
     params.require(:gram).permit(:message)
   end
+
 end
 
