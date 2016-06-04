@@ -46,6 +46,13 @@ gem 'simple_form'
 
 gem 'devise'
 
+gem 'carrierwave'
+
+gem "figaro"
+
+gem "fog"
+
+gem 'nokogiri', '1.5'
 
 
 
