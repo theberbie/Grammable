@@ -50,9 +50,9 @@ gem 'carrierwave'
 
 gem "figaro"
 
-gem "fog"
+gem "fog", "~> 1.3.1"
 
-gem 'nokogiri', '1.5'
+#gem 'nokogiri', '1.5'
 
 
 
